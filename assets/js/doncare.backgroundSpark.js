@@ -138,7 +138,10 @@ var backgroundSpark = (function() {
                     $(that.dom).find("img").each(function(){
                         this._sparkx = $(this).offset().left;
                         this._sparky = $(this).offset().top;
-                        $(this).css("opacity", parseInt(Math.random() * that.config.opacityRatio * 10) / 100);
+                        $(this).fadeTo(
+                            parseInt(Math.random() * 1000 + 1000), 
+                            parseInt(Math.random() * that.config.opacityRatio * 10) / 100
+                        );
                     });
                     // window.setTimeout(function(){
                     //     sparkRandomMoveHEL(that.dom);
@@ -149,7 +152,7 @@ var backgroundSpark = (function() {
                         img._sparkx = $(img).offset().left;
                         img._sparky = $(img).offset().top;
                         $(img).fadeTo(
-                            parseInt(Math.random() * 2000), 
+                            parseInt(Math.random() * 1000 + 1000), 
                             parseInt(Math.random() * that.config.opacityRatio * 10) / 100,
                             sparkRandomMove
                         );
