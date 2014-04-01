@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>对话框</title>
+<link href="assets/css/doncare.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/doncare.frame.css" type="text/css" rel="stylesheet" />
+<link href="assets/font/icon200.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="assets/font/icon200ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/doncare.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.page.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.frame.js" type="text/javascript" defer></script>
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-left">
+        
+    </div>
+    <div class="header-option">
+        <a href="javascript:;" onclick="DC.page.open('select.html');" ><i class="icon-sign-left"></i>Select美化</a>
+        <a href="javascript:;" onclick="DC.page.open('tab.html');" ><i class="icon-sign-right"></i>标签页</a>
+    </div>
+</div>
+<div id="main" class="main">
+
+    <div class="block">
+        <div class="block-main">
+            <h3>简单看一个<small><strike>超豪华的</strike></small>对话框</h3>
+            <hr />
+            <div class="gap10"></div>
+            <a href="javascript:;" onclick="DC.showModal('#modal-alert')" class="btn"><span><i class="icon-dialog"></i>点我开启对话框</span></a>
+        </div>
+    </div>
+
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>对话框的炼成</h3>
+            <hr />
+            <p>请按这个格式制作对话框</p>
+            <div class="code-block">
+                <pre>
+&lt;div id="modal-alert" class="modal"&gt;
+    &lt;!-- 对话框的标题 --&gt;
+    &lt;div class="modal-header"&gt;
+        对话框 modal
+    &lt;/div&gt;
+    &lt;div class="modal-main"&gt;
+        &lt;!-- 对话框的主体内容 --&gt;
+        这是对话框&lt;br /&gt;
+        Tada! I'm a modal.
+
+        &lt;!-- 对话框的操作栏 --&gt;
+        &lt;div class="modal-option"&gt;
+            &lt;a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-primary"&gt;
+                &lt;span&gt;&lt;i class="icon-ok"&gt;&lt;/i&gt;确定&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 这是对话框背景，请保留 --&gt;
+        &lt;span class="modal-rolling-bg"&gt;&lt;i class="icon-cog"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class="modal-rocking-bg"&gt;&lt;i class="icon-reload"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class="modal-rolling-bg2"&gt;&lt;i class="icon-cog"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- 触发一个对话框 --&gt;
+&lt;a href="javascript:;" onclick="DC.showModal('#modal-alert')" class="btn"&gt;
+    &lt;span&gt;&lt;i class="icon-dialog"&gt;&lt;/i&gt;点我开启对话框&lt;/span&gt;
+&lt;/a&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="block">
+        <div class="block-main">
+            <h3>几种推荐形式的对话框</h3>
+            <hr />
+            <p>常用的、奇葩的都有</p>
+        </div>
+    </div>
+    
+
+    <div class="block transparent">
+        <div class="block-header">
+            <span>双按钮对话框</span>
+        </div>
+        <div class="block-main">
+            <div class="modal static-modal">
+                <!-- 对话框的标题 -->
+                <div class="modal-header">
+                    国风·周南·关雎
+                </div>
+                <div class="modal-main">
+                    <!-- 对话框的主体内容 -->
+                    关关雎鸠，在河之洲。窈窕淑女，君子好逑。<br />
+                    参差荇菜，左右流之。窈窕淑女，寤寐求之。<br />
+                    求之不得，寤寐思服。悠哉悠哉，辗转反侧。<br />
+                    参差荇菜，左右采之。窈窕淑女，琴瑟友之。<br />
+                    参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。<br />
+
+                    <!-- 对话框的操作栏 -->
+                    <div class="modal-option">
+                        <div class="row-fluid">
+                            <div class="span6">
+                                <a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-primary"><span><i class="icon-ok"></i>确定</span></a>
+                            </div>
+                            <div class="span6">
+                                <a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-info"><span><i class="icon-prev"></i>取消</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 这是对话框背景，请保留 -->
+                    <span class="modal-rolling-bg"><i class="icon-cog"></i></span>
+                    <span class="modal-rocking-bg"><i class="icon-reload"></i></span>
+                    <span class="modal-rolling-bg2"><i class="icon-cog"></i></span>
+                </div>
+            </div>
+            
+            <div class="gap30"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;div class="modal static-modal"&gt;
+    &lt;!-- 对话框的标题 --&gt;
+    &lt;div class="modal-header"&gt;
+        modal is-static
+    &lt;/div&gt;
+    &lt;div class="modal-main"&gt;
+        &lt;!-- 对话框的主体内容 --&gt;
+        123456
+
+        &lt;!-- 对话框的操作栏 --&gt;
+        &lt;div class="modal-option"&gt;
+            &lt;div class="row-fluid"&gt;
+                &lt;div class="span6"&gt;
+                    &lt;a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-primary"&gt;
+                        &lt;span&gt;&lt;i class="icon-ok"&gt;&lt;/i&gt;确定&lt;/span&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+                &lt;div class="span6"&gt;
+                    &lt;a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-info"&gt;
+                        &lt;span&gt;&lt;i class="icon-prev"&gt;&lt;/i&gt;取消
+                    &lt;/span&gt;&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 这是对话框背景，请保留 --&gt;
+        &lt;span class="modal-rolling-bg"&gt;&lt;i class="icon-cog"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class="modal-rocking-bg"&gt;&lt;i class="icon-reload"&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class="modal-rolling-bg2"&gt;&lt;i class="icon-cog"&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="block transparent">
+        <div class="block-header">
+            <span>大对话框、带关闭按钮的对话框</span>
+        </div>
+        <div class="block-main">
+            <div class="modal static-modal big-modal">
+                <!-- 对话框的标题 -->
+                <div class="modal-header">
+                    国风·秦风·蒹葭
+                    <a href="javascript:;" onclick="DC.hideModal('#modal-id')" class="link"><i class="icon-error"></i></a>
+                </div>
+                <div class="modal-main">
+                    <!-- 对话框的主体内容 -->
+                    蒹葭苍苍，白露为霜。所谓伊人，在水一方。<br />
+                    溯洄从之，道阻且长。溯游从之，宛在水中央。<br />
+                    蒹葭萋萋，白露未晞。所谓伊人，在水之湄。<br />
+                    溯洄从之，道阻且跻。溯游从之，宛在水中坻。<br />
+                    蒹葭采采，白露未已。所谓伊人，在水之涘。<br />
+
+                    <!-- 对话框的操作栏 -->
+                    <div class="modal-option">
+                        <div class="row-fluid">
+                            <a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-primary"><span><i class="icon-ok"></i>确定</span></a>
+                        </div>
+                    </div>
+
+                    <!-- 这是对话框背景，请保留 -->
+                    <span class="modal-rolling-bg"><i class="icon-cog"></i></span>
+                    <span class="modal-rocking-bg"><i class="icon-reload"></i></span>
+                    <span class="modal-rolling-bg2"><i class="icon-cog"></i></span>
+                </div>
+            </div>
+            
+            <div class="gap30"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;div class="modal big-modal"&gt;
+    &lt;div class="modal-header"&gt;
+        modal title
+        &lt;a href="javascript:;" onclick="DC.hideModal('#modal-id')" class="link"&gt;&lt;i class="icon-error"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;/div&gt;
+    ...</pre>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="modal-alert" class="modal">
+    <!-- 对话框的标题 -->
+    <div class="modal-header">
+        对话框 modal
+    </div>
+    <div class="modal-main">
+        <!-- 对话框的主体内容 -->
+        这是对话框<br />
+        Tada! I'm a modal.
+
+        <!-- 对话框的操作栏 -->
+        <div class="modal-option">
+            <a href="javascript:;" onclick="DC.hideModal('#modal-alert')" class="btn cross btn-primary"><span><i class="icon-ok"></i>确定</span></a>
+        </div>
+
+        <!-- 这是对话框背景，请保留 -->
+        <span class="modal-rolling-bg"><i class="icon-cog"></i></span>
+        <span class="modal-rocking-bg"><i class="icon-reload"></i></span>
+        <span class="modal-rolling-bg2"><i class="icon-cog"></i></span>
+    </div>
+</div>
+
+</body>
+</html>

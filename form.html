@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>表单</title>
+<link href="assets/css/doncare.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/doncare.frame.css" type="text/css" rel="stylesheet" />
+<link href="assets/font/icon200.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="assets/font/icon200ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/doncare.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.page.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.frame.js" type="text/javascript" defer></script>
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-left">
+        
+    </div>
+    <div class="header-option">
+        <a href="javascript:;" onclick="DC.page.open('table.html');" ><i class="icon-sign-left"></i>表格</a>
+        <a href="javascript:;" onclick="DC.page.open('button.html');" ><i class="icon-sign-right"></i>按钮</a>
+    </div>
+</div>
+<div id="main" class="main">
+    <div class="block">
+        <div class="block-main">
+            <h3>创作一个表单</h3>
+            <hr />
+            <p>使用class<code>.form</code> <code>.input</code> <code>.textarea</code> <code>.select</code> <code>.radio</code> <code>.checkbox</code>组织内容</p>
+
+            <div class="gap10"></div>
+
+            <form action="" class="form" method="get">
+            
+                <div class="row">
+                    <label for="username" class="label">用户名</label>
+                    <input type="text" name="username" class="input" />
+                </div>
+            
+                <div class="row">
+                    <label for="password" class="label">密码</label>
+                    <input type="password" name="password" class="input" />
+                </div>
+            
+                <div class="row">
+                    <label class="label">性别</label>
+                    <input type="radio" name="gender" id="gender1" class="radio" />
+                    <label for="gender1" class="label-inline">男</label>
+                    <input type="radio" name="gender" id="gender2" class="radio" />
+                    <label for="gender2" class="label-inline">女</label>
+                    <input type="radio" name="gender" id="gender3" class="radio" />
+                    <label for="gender3" class="label-inline">中兴</label>
+                </div>
+            
+                <div class="row">
+                    <label class="label">选择一个爱好</label>
+                    <select name="select" class="select">
+                        <option value="1">宅寂</option>
+                        <option value="2">和朋友爬山</option>
+                        <option value="3">看电视</option>
+                    </select>
+                </div>
+            
+                <div class="row">
+                    <label class="label">说点什么</label>
+                    <textarea class="textarea">brad皮特</textarea>
+                </div>
+            
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary"><span><i class="icon-warning"></i>提交表单</span></button>
+                    &nbsp; &nbsp;
+                    <input type="checkbox" id="agreement" name="agreement" class="checkbox" />
+                    <label for="agreement" class="label-inline">我同意<a href="javascript:;" class="link"><i class="icon-file"></i>坑爹用户协议</a></label>
+                </div>
+            
+            </form>
+            
+            <div class="code-block">
+<pre>
+&lt;form action="" class="form" method="get"&gt;
+    &lt;div class="row"&gt;
+        &lt;label for="username" class="label"&gt;用户名&lt;/label&gt;
+        &lt;input type="text" name="username" class="input" /&gt;
+    &lt;/div&gt;
+    ... 
+    &lt;div class="submit"&gt;
+        &lt;button type="submit" class="btn btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;提交表单&lt;/span&gt;&lt;/button&gt;
+        &amp;nbsp; &amp;nbsp;
+        &lt;input type="checkbox" id="agreement" name="agreement" class="checkbox" /&gt;
+        &lt;label for="agreement" class="label-inline"&gt;我同意&lt;a href="javascript:;" class="link"&gt;&lt;i class="icon-file"&gt;&lt;/i&gt;坑爹用户协议&lt;/a&gt;&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>内联表单</h3>
+            <hr />
+            <p>使用class<code>.form-inline</code></p>
+
+            <form action="" class="form-inline" method="get">
+    
+                <div class="row">
+                    <label for="username" class="label">用户名</label>
+                    <input type="text" name="username" class="input" />
+                </div>
+    
+                <div class="row">
+                    <label class="label">爱好限定</label>
+                    <select name="select" class="select">
+                        <option value="0">全部</option>
+                        <option value="1">宅寂</option>
+                        <option value="2">和朋友爬山</option>
+                        <option value="3">看电视</option>
+                    </select>
+                </div>
+    
+                <div class="row">
+                    <input type="checkbox" id="registered" name="registered" class="checkbox" />
+                    <label for="registered" class="label-inline">已注册的用户</label>
+                </div>
+    
+                <div class="submit">
+                    <button type="submit" class="btn"><span><i class="icon-search"></i>搜索</span></button>
+                </div>
+    
+            </form>
+    
+            <div class="code-block">
+                <pre>
+&lt;form action="" class="form-inline"&gt;
+    ... 
+&lt;/form&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>水平表单</h3>
+            <hr />
+            <p>使用class<code>.form-horizon</code>创作</p>
+
+            <div class="gap10"></div>
+
+            <form action="" class="form-horizon" method="get">
+            
+                <div class="row">
+                    <label for="username" class="label">用户名</label>
+                    <div class="input">
+                        <input type="text" name="username" class="input" />
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <label for="password" class="label">密码</label>
+                    <div class="input">
+                        <input type="password" name="password" class="input" />
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <label class="label">性别</label>
+                    <div class="input checkbox">
+                        <input type="radio" name="gender" id="gender21" class="radio" />
+                        <label for="gender21" class="label-inline">男</label>
+                        <input type="radio" name="gender" id="gender22" class="radio" />
+                        <label for="gender22" class="label-inline">女</label>
+                        <input type="radio" name="gender" id="gender23" class="radio" />
+                        <label for="gender23" class="label-inline">中兴</label>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <label class="label">选择一个爱好</label>
+                    <div class="input">
+                        <select name="select" class="select">
+                            <option value="1">宅寂</option>
+                            <option value="2">和朋友爬山</option>
+                            <option value="3">看电视</option>
+                        </select>
+                    </div>
+                </div>
+            
+                <div class="row">
+                    <label class="label">说点什么</label>
+                    <div class="input">
+                        <textarea class="textarea">brad皮特</textarea>
+                    </div>
+                </div>
+            
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary"><span><i class="icon-warning"></i>提交表单</span></button>
+                    &nbsp; &nbsp;
+                    <input type="checkbox" id="agreement2" name="agreement2" class="checkbox" />
+                    <label for="agreement2" class="label-inline">我同意<a href="javascript:;" class="link"><i class="icon-file"></i>坑爹用户协议</a></label>
+                </div>
+            
+            </form>
+            
+            <div class="code-block">
+<pre>
+&lt;form action="" class="form-horizon"&gt;
+    ... 
+&lt;/form&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>禁止的表单项</h3>
+            <hr />
+            <p>为表单项添加<code>disabled</code>属性</p>
+
+            <form action="" class="form" method="get">
+    
+                <div class="row">
+                    <label for="username" class="label">用户名</label>
+                    <input type="text" name="username" class="input" value="不可更改" disabled />
+                </div>
+    
+                <div class="row">
+                    <label class="label">爱好限定</label>
+                    <select name="select" class="select" disabled>
+                        <option value="0">全部</option>
+                        <option value="1">宅寂</option>
+                        <option value="2">和朋友爬山</option>
+                        <option value="3">看电视</option>
+                    </select>
+                </div>
+
+                <div class="row">
+                    <label class="label">性别</label>
+                    <div class="input checkbox">
+                        <input type="radio" name="gender" id="gender31" class="radio" disabled />
+                        <label for="gender31" class="label-inline">男</label>
+                        <input type="radio" name="gender" id="gender32" class="radio" disabled />
+                        <label for="gender32" class="label-inline">女</label>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <input type="checkbox" id="registered2" name="registered2" class="checkbox" disabled />
+                    <label for="registered2" class="label-inline">已注册的用户</label>
+                </div>
+            
+                <div class="row">
+                    <label class="label">不能说</label>
+                    <div class="input">
+                        <textarea class="textarea" disabled>brad皮特</textarea>
+                    </div>
+                </div>
+    
+            </form>
+    
+            <div class="code-block">
+                <pre>
+&lt;input type="text" class="input" disabled /&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>多彩的验证</h3>
+            <hr />
+            <p>使用class<code>.has-success</code>, <code>.has-warning</code>, <code>.has-error</code>标记表单<code>.row</code></p>
+
+            <div class="gap10"></div>
+
+            <form action="" class="form" method="get">
+            
+                <div class="row has-success">
+                    <label for="username40" class="label">用户名</label>
+                    <input type="text" name="username40" id="username40" class="input" />
+                </div>
+            
+                <div class="row has-warning">
+                    <label for="password41" class="label">密码</label>
+                    <input type="password" name="password41" id="password41" class="input" />
+                </div>
+            
+                <div class="row has-error">
+                    <label for="password42" class="label">重复密码</label>
+                    <input type="password" name="password42" id="password42" class="input" />
+                </div>
+            
+            </form>
+            
+            <div class="code-block">
+<pre>
+&lt;div class="row has-success"&gt;
+    ... 
+&lt;/div&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>尺寸设置</h3>
+            <hr />
+            <p>为表单项添加class<code>.shorter</code>, <code>.short</code>, <code>.medium</code>, <code>.long</code>, <code>.longer</code>控制长度, 使用<code>.tiny</code>, <code>.mini</code>, <code>.big</code>, <code>.huge</code>设置高度</p>
+
+            <form action="" class="form" method="get">
+    
+                <div class="row">
+                    <input type="text" name="username" class="input shorter" value=".shorter" /> 
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input short" value=".short" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input medium" value=".medium" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input long" value=".long" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input longer" value=".longer" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input tiny" value=".tiny" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input mini" value=".mini" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input" value="正常高度" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input big" value=".big" />
+                </div>
+    
+                <div class="row">
+                    <input type="text" name="username" class="input huge" value=".huge" />
+                </div>
+    
+            </form>
+    
+            <div class="code-block">
+                <pre>
+&lt;input type="text" class="input short" /&gt;
+&lt;input type="text" class="input mini" /&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>帮助文字</h3>
+            <hr />
+            <p>使用span class<code>.help-text</code></p>
+
+            <div class="gap10"></div>
+
+            <form action="" class="form" method="get">
+        
+                <div class="row">
+                    <label class="label">用户名<span class="help-text">标题的帮助文字</span></label>
+                    <input type="text" name="username40" class="input" />
+                </div>
+        
+                <div class="row">
+                    <label class="label">密码</label>
+                    <input type="password" name="password41" class="input" />
+                    <span class="help-text">独立的帮助文字</span>
+                </div>
+        
+            </form>
+            
+            <div class="code-block">
+<pre>
+&lt;label class="label"&gt;标题&lt;span class="help-text"&gt;内嵌帮助&lt;/span&gt;&lt;/label&gt;
+&lt;span class="help-text"&gt;独立的帮助文字&lt;/span&gt;
+</pre>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>标签页</title>
+<link href="assets/css/doncare.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/doncare.frame.css" type="text/css" rel="stylesheet" />
+<link href="assets/font/icon200.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="assets/font/icon200ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/doncare.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.page.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.frame.js" type="text/javascript" defer></script>
+<script type="text/javascript">
+$(function(){
+    DC.tab("#tab-example1");
+});
+</script>
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-left">
+        
+    </div>
+    <div class="header-option">
+        <a href="javascript:;" onclick="DC.page.open('modal.html');" ><i class="icon-sign-left"></i>对话框</a>
+        <a href="javascript:;" onclick="DC.page.open('list.html');" ><i class="icon-sign-right"></i>列表页</a>
+    </div>
+</div>
+<div id="main" class="main">
+
+    <div class="block">
+        <div class="block-header"><span>标签页实例</span></div>
+        <div class="block-main">
+            <div class="gap10"></div>
+            <ul id="tab-example1" class="tab">
+                <li class="active"><a href="#msg1">国风·卫风·木瓜</a></li>
+                <li><a href="#msg2">国风·邶风·击鼓</a></li>
+                <li><a href="#msg3">国风·周南·桃之夭夭</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-panel active" id="msg1">
+                    <div class="block transparent">
+                        <div class="block-main">
+                            投我以木瓜，报之以琼琚。匪报也，永以为好也。<br />
+                            投我以木桃，报之以琼瑶。匪报也，永以为好也。<br />
+                            投我以木李，报之以琼玖。匪报也，永以为好也。<br />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="msg2">
+                    <div class="block transparent">
+                        <div class="block-main">
+                            击鼓其镗，踊跃用兵。土国城漕，我独南行。<br />
+                            从孙子仲，平陈与宋。不我以归，忧心有忡。<br />
+                            爰居爰处？爰丧其马？于以求之？于林之下。<br />
+                            死生契阔，与子成说。执子之手，与子偕老。<br />
+                            于嗟阔兮，不我活兮。于嗟洵兮，不我信兮。<br />
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-panel" id="msg3">
+                    <div class="block transparent">
+                        <div class="block-main">
+                            桃之夭夭，灼灼其华。之子于归，宜其室家。<br />
+                            桃之夭夭，有蕡其实。之子于归，宜其家室。<br />
+                            桃之夭夭，其叶蓁蓁。之子于归，宜其家人。<br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="block transparent">
+        <div class="block-header"><span>实现代码</span></div>
+        <div class="block-main">
+            <div class="code-block">
+                <pre>
+&lt;ul id="tab-example1" class="tab"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1"&gt;tab1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2"&gt;tab2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab3"&gt;tab3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class="tab-content"&gt;
+    &lt;div class="tab-panel active" id="tab1"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="tab-panel" id="tab2"&gt;
+        ...
+    &lt;/div&gt;
+    &lt;div class="tab-panel" id="tab3"&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+$(function(){
+    DC.tab("#tab-example1");
+});
+&lt;/script&gt;</pre>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
