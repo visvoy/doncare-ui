@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>按钮</title>
+<link href="assets/css/doncare.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/doncare.frame.css" type="text/css" rel="stylesheet" />
+<link href="assets/font/icon200.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="assets/font/icon200ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/doncare.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.page.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.frame.js" type="text/javascript" defer></script>
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-left">
+        
+    </div>
+    <div class="header-option">
+        <a href="javascript:;" onclick="DC.page.open('form.html');" ><i class="icon-sign-left"></i>表单</a>
+        <a href="javascript:;" onclick="DC.page.open('icon.html');" ><i class="icon-sign-right"></i>图标库</a>
+    </div>
+</div>
+<div id="main" class="main">
+    <div class="block">
+        <div class="block-header">
+            <span>一组平凡的按钮</span>
+        </div>
+        <div class="block-main">
+            <a href="javascript:;" class="btn"><span>默认按钮</span></a>
+            
+            <a href="javascript:;" class="btn btn-primary"><span>primary</span></a>
+            
+            <a href="javascript:;" class="btn btn-success"><span>success</span></a>
+            
+            <a href="javascript:;" class="btn btn-info"><span>info</span></a>
+            
+            <a href="javascript:;" class="btn btn-warning"><span>warning</span></a>
+            
+            <a href="javascript:;" class="btn btn-love"><span>love</span></a>
+            
+            <a href="javascript:;" class="btn btn-danger"><span>danger</span></a>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;a href="javascript:;" class="btn"&gt;&lt;span&gt;默认按钮&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-primary"&gt;&lt;span&gt;primary&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-success"&gt;&lt;span&gt;success&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-info"&gt;&lt;span&gt;info&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-warning"&gt;&lt;span&gt;warning&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-love"&gt;&lt;span&gt;love&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-danger"&gt;&lt;span&gt;danger&lt;/span&gt;&lt;/a&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-header">
+            <span>使用<code>button</code>制作的按钮，适合提交表单使用</span>
+        </div>
+        <div class="block-main">
+            <button type="button" class="btn"><span>默认按钮</span></button>
+            
+            <button type="submit" class="btn btn-primary"><span>primary</span></button>
+            
+            <button type="button" class="btn btn-success"><span>success</span></button>
+            
+            <button type="button" class="btn btn-info"><span>info</span></button>
+            
+            <button type="button" class="btn btn-warning"><span>warning</span></button>
+            
+            <button type="button" class="btn btn-love"><span>love</span></button>
+            
+            <button type="button" class="btn btn-danger"><span>danger</span></button>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;button type="button" class="btn"&gt;&lt;span&gt;默认按钮&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="submit" class="btn btn-primary"&gt;&lt;span&gt;primary&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-success"&gt;&lt;span&gt;success&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-info"&gt;&lt;span&gt;info&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-warning"&gt;&lt;span&gt;warning&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-love"&gt;&lt;span&gt;love&lt;/span&gt;&lt;/button&gt;
+
+&lt;button type="button" class="btn btn-danger"&gt;&lt;span&gt;danger&lt;/span&gt;&lt;/button&gt;</pre>
+            </div>
+        </div>
+        <div class="block-footer">
+            <span>使用<code>button</code>制作的按钮，适合提交表单使用</span>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>你应该为每个按钮增加一个图标</h3>
+            <hr />
+            <p>这样才能让使用者认为这里可以点击</p>
+            <a href="javascript:;" class="btn"><span><i class="icon-search"></i>我可以被点击</span></a>
+            <a href="javascript:;" class="btn btn-love"><span><i class="icon-heart"></i>添加到收藏夹</span></a>
+            <a href="javascript:;" class="btn btn-primary"><span><i class="icon-cart"></i>加入购物车</span></a>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;a href="javascript:;" class="btn"&gt;&lt;span&gt;&lt;i class="icon-search"&gt;&lt;/i&gt;我可以被点击&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-love"&gt;&lt;span&gt;&lt;i class="icon-heart"&gt;&lt;/i&gt;添加到收藏夹&lt;/span&gt;&lt;/a&gt;
+
+&lt;a href="javascript:;" class="btn btn-primary"&gt;&lt;span&gt;&lt;i class="icon-cart"&gt;&lt;/i&gt;加入购物车&lt;/span&gt;&lt;/a&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-header">
+            <span>设置按钮尺寸</span>
+        </div>
+        <div class="block-main">
+            <p>
+                <a href="javascript:;" class="btn huge btn-primary"><span><i class="icon-warning"></i>巨型钮 .huge</span></a>
+            </p>
+            
+            <p>
+                <a href="javascript:;" class="btn big btn-primary"><span><i class="icon-warning"></i>大按钮 .big</span></a>
+            </p>
+            
+            <p>
+                <a href="javascript:;" class="btn btn-primary"><span><i class="icon-warning"></i>普通 .btn</span></a>
+            </p>
+            
+            <p>
+                <button type="button" class="btn mini btn-primary"><span><i class="icon-warning"></i>迷你 .mini</span></button>
+            </p>
+            
+            <p>
+                <button type="button" class="btn tiny btn-primary"><span><i class="icon-warning"></i>极小 .tiny</span></button>
+            </p>
+            
+            <p>
+                <button type="button" class="btn cross btn-primary"><span><i class="icon-warning"></i>横贯长度 .cross</span></button>
+            </p>
+            
+            <p>
+                <button type="button" class="btn huge cross btn-primary"><span><i class="icon-warning"></i>横贯长度的巨大按钮 .huge.cross</span></button>
+            </p>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;p&gt;
+    &lt;a href="javascript:;" class="btn huge btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;巨型钮 .huge&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;a href="javascript:;" class="btn big btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;大按钮 .big&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;a href="javascript:;" class="btn btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;普通 .btn&lt;/span&gt;&lt;/a&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;button type="button" class="btn mini btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;迷你 .mini&lt;/span&gt;&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;button type="button" class="btn tiny btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;极小 .tiny&lt;/span&gt;&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;button type="button" class="btn cross btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;横贯长度 .cross&lt;/span&gt;&lt;/button&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+    &lt;button type="button" class="btn huge cross btn-primary"&gt;&lt;span&gt;&lt;i class="icon-warning"&gt;&lt;/i&gt;横贯长度的巨大按钮 .huge.cross&lt;/span&gt;&lt;/button&gt;
+&lt;/p&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>禁止的按钮</h3>
+            <hr />
+            <p>附加<code>disabled</code>属性</p>
+            <a href="javascript:;" class="btn btn-love" disabled><span><i class="icon-heart"></i>添加到收藏夹</span></a>
+            <button type="button" class="btn btn-primary" disabled><span><i class="icon-cart"></i>加入购物车</span></button>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;a href="javascript:;" class="btn btn-love" disabled&gt;&lt;span&gt;&lt;i class="icon-heart"&gt;&lt;/i&gt;添加到收藏夹&lt;/span&gt;&lt;/a&gt;
+
+&lt;button type="button" class="btn btn-primary" disabled&gt;&lt;span&gt;&lt;i class="icon-cart"&gt;&lt;/i&gt;加入购物车&lt;/span&gt;&lt;/button&gt;</pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>制作按钮组</h3>
+            <hr />
+            <p>使用div<code>.btn-group</code>包围按钮</p>
+            
+            <div class="btn-group">
+                <a href="javascript:;" class="btn mini btn-success"><span><i class="icon-briefcase"></i>复制</span></a>
+                <button type="button" class="btn mini btn-primary"><span><i class="icon-prev"></i>回退</span></button>
+                <a href="javascript:;" class="btn mini btn-info"><span><i class="icon-arrow-right"></i>下一页</span></a>
+                <a href="javascript:;" class="btn mini btn-info"><span><i class="icon-arrow-right"></i>下一页</span></a>
+                <a href="javascript:;" class="btn mini btn-info"><span><i class="icon-location2"></i>查找定位</span></a>
+                <a href="javascript:;" class="btn mini btn-danger"><span><i class="icon-last-turn"></i>打个标记</span></a>
+            </div>
+            
+            <div class="gap20"></div>
+            
+            <div class="code-block">
+                <pre>
+&lt;div class="btn-group"&gt;
+    &lt;a href="javascript:;" class="btn mini btn-success"&gt;&lt;span&gt;&lt;i class="icon-briefcase"&gt;&lt;/i&gt;复制&lt;/span&gt;&lt;/a&gt;
+    &lt;button type="button" class="btn mini btn-primary"&gt;&lt;span&gt;&lt;i class="icon-prev"&gt;&lt;/i&gt;回退&lt;/span&gt;&lt;/button&gt;
+    &lt;a href="javascript:;" class="btn mini btn-info"&gt;&lt;span&gt;&lt;i class="icon-arrow-right"&gt;&lt;/i&gt;下一页&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="javascript:;" class="btn mini btn-info"&gt;&lt;span&gt;&lt;i class="icon-arrow-right"&gt;&lt;/i&gt;下一页&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="javascript:;" class="btn mini btn-info"&gt;&lt;span&gt;&lt;i class="icon-location2"&gt;&lt;/i&gt;查找定位&lt;/span&gt;&lt;/a&gt;
+    &lt;a href="javascript:;" class="btn mini btn-danger"&gt;&lt;span&gt;&lt;i class="icon-last-turn"&gt;&lt;/i&gt;打个标记&lt;/span&gt;&lt;/a&gt;
+&lt;/div&gt;</pre>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<title>表格</title>
+<link href="assets/css/doncare.css" type="text/css" rel="stylesheet" />
+<link href="assets/css/doncare.frame.css" type="text/css" rel="stylesheet" />
+<link href="assets/font/icon200.css" type="text/css" rel="stylesheet">
+<!--[if lt IE 8]>
+<link href="assets/font/icon200ie7.css" type="text/css" rel="stylesheet">
+<![endif]-->
+<script src="assets/js/jquery.js" type="text/javascript"></script>
+<script src="assets/js/doncare.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.page.js" type="text/javascript" defer></script>
+<script src="assets/js/doncare.frame.js" type="text/javascript" defer></script>
+</head>
+<body>
+<div id="header" class="header">
+    <div class="header-left">
+        
+    </div>
+    <div class="header-option">
+        <a href="javascript:;" onclick="DC.page.open('layout.html');" ><i class="icon-sign-left"></i>基本框架</a>
+        <a href="javascript:;" onclick="DC.page.open('form.html');" ><i class="icon-sign-right"></i>表单</a>
+    </div>
+</div>
+<div id="main" class="main">
+    <div class="block">
+        <div class="block-main">
+            <h3>简单的看个例子</h3>
+            <hr />
+            <p>使用class<code>.table</code>制作一个表格</p>
+            <table class="table">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            
+            
+            <div class="code-block">
+                <pre>
+&lt;table class="table"&gt;
+ ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>间条式的表格</h3>
+            <hr />
+            <p>使用<code>.table.with-stripe</code>创建表格</p>    
+    
+            <table class="table with-stripe">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            <div class="code-block">
+        <pre>
+&lt;table class="table with-stripe"&gt;
+  ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>完整边框的表格</h3>
+            <hr />
+            <p>使用<code>.table.with-border</code>创建表格</p>    
+    
+            <table class="table with-border">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            <div class="code-block">
+                <pre>
+&lt;table class="table with-border"&gt;
+  ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>有鼠标悬停特效的表格</h3>
+            <hr />
+            <p>使用<code>.table.effect-hover</code>创建表格</p>    
+    
+            <table class="table effect-hover">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            <div class="code-block">
+                <pre>
+&lt;table class="table effect-hover"&gt;
+  ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="block-main">
+            <h3>紧凑的表格</h3>
+            <hr />
+            <p>使用<code>.table.make-narrow</code>创建表格</p>    
+    
+            <table class="table make-narrow">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            <div class="code-block">
+                <pre>
+&lt;table class="table make-narrow"&gt;
+  ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block transparent">
+        <div class="block-main">
+            <h3>十全大补的表格</h3>
+            <hr />
+            <p>使用多重class创建表格</p>    
+    
+            <table class="table with-stripe with-border effect-hover make-narrow">
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>昵称</th>
+                    <th>年龄</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>小美</td>
+                    <td>美美</td>
+                    <td>17</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>小虎</td>
+                    <td>虎子</td>
+                    <td>19</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>小牛</td>
+                    <td>无</td>
+                    <td>16</td>
+                </tr>
+            </table>
+            <div class="code-block">
+                <pre>
+&lt;table class="table with-stripe with-border effect-hover make-narrow"&gt;
+  ...
+&lt;/table&gt;
+                </pre>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
