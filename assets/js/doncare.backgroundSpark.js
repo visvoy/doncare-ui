@@ -88,7 +88,7 @@ var backgroundSpark = (function() {
                 
                 var sp = this;
                 
-                if (doncare.firefox || $(sp).parent().hasClass('animBgLarger')) {
+                if (doncare.chrome || doncare.firefox || $(sp).parent().hasClass('animBgLarger')) {
                     $(sp).fadeOut(parseInt(Math.random() * 3000 + 1000), function() {
                         if ( ! $(sp).parent().hasClass('animBgLarger')) {
                             $(sp).css(anim);
