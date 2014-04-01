@@ -21,6 +21,8 @@ window.doncare = window.DC = {
     
     firefox: (navigator.userAgent.indexOf("Firefox") != -1),
     
+    chrome: (navigator.userAgent.indexOf("Chrome") != -1),
+    
     css3D: (function(){
         var props = ['perspectiveProperty', 'WebkitPerspective', 'MozPerspective', 'MsPerspective'], 
             testDom = document.createElement('a');
