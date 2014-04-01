@@ -78,47 +78,83 @@ var backgroundSpark = (function() {
                 }
                 
                 anim = {
-                    left: (pos.left + x), 
-                    top: (pos.top + y)
-                };
-                anim = {
                     left: (this._sparkx + x), 
                     top: (this._sparky + y)
                 };
                 
                 var sp = this;
-                
-                if (doncare.firefox || doncare.chrome || $(sp).parent().hasClass('animBgLarger')) {
-                    $(sp).fadeOut(parseInt(Math.random() * 3000 + 1000), function() {
-                        if ( ! $(sp).parent().hasClass('animBgLarger')) {
-                            $(sp).css(anim);
-                        }
-                        $(sp).fadeTo(
-                            parseInt(Math.random() * 3000 + 1000), 
-                            parseInt(Math.random() * that.config.opacityRatio * 10) / 100,
-                            function() {
-                                sparkRandomMove.call(sp);
-                            }
-                        );
-                    });
-                } else {
-                    $(sp).animate(anim, parseInt(Math.random() * 1000 + 1000) , function(){
-                        sparkRandomMove.call(sp);
-                    });
-                }
+                $(sp).animate(anim, parseInt(Math.random() * 1000 + 1000) , function(){
+                    sparkRandomMove.call(sp);
+                });
             }
             
-            if ( ! doncare.ie) {
-                $(that.dom).find("img").each(function(){
-                    var img = this;
-                    img._sparkx = $(img).offset().left;
-                    img._sparky = $(img).offset().top;
-                    $(img).fadeTo(
-                        parseInt(Math.random() * 2000), 
-                        parseInt(Math.random() * that.config.opacityRatio * 10) / 100,
-                        sparkRandomMove
-                    );
+            /*
+            function sparkRandomMoveHEL(dom) {
+                var winWidth = $(window).width(), winHeight = $(window).height();
+                
+                $(dom).find("img").fadeOut(Math.random() * 1000 + 1000, function(){
+                    $(dom).find("img").each(function(){
+                        var x, y, pos = $(this).offset(), wid = $(this).width(), hgt = $(this).height();
+                
+                        x = parseInt(Math.random() * 20) * (Math.random() < 0.5 ? -1 : 1);
+                        y = parseInt(Math.random() * 20) * (Math.random() < 0.5 ? -1 : 1);
+                
+                        if (x < 0 && pos.left < - wid / 3) {
+                            x = -x;
+                        } else if (x > 0 && pos.left + wid / 3 > winWidth) {
+                            x = -x;
+                        }
+                        if (y < 0 && pos.top < - hgt / 3) {
+                            y = -y;
+                        } else if (y > 0 && pos.top + hgt / 3 > winHeight) {
+                            y = -y;
+                        }
+                        
+                        $(this).css({
+                            left: (this._sparkx + x), 
+                            top: (this._sparky + y)
+                        });
+                    });
+                    
                 });
+                
+                window.setTimeout(function(){
+                    $(dom).find("img").each(function(){
+                        $(this).fadeTo(
+                            parseInt(Math.random() * 1000 + 1000), 
+                            parseInt(Math.random() * that.config.opacityRatio * 10) / 100
+                        );
+                    });
+                }, 3000);
+                
+                window.setTimeout(function(){
+                    sparkRandomMoveHEL(dom);
+                }, Math.random() * 3000 + 8000);
+            }
+            */
+            
+            if ( ! doncare.ie) {
+                if (doncare.firefox || doncare.chrome || $(that.dom).hasClass('animBgLarger')) {
+                    $(that.dom).find("img").each(function(){
+                        this._sparkx = $(this).offset().left;
+                        this._sparky = $(this).offset().top;
+                        $(this).css("opacity", parseInt(Math.random() * that.config.opacityRatio * 10) / 100);
+                    });
+                    // window.setTimeout(function(){
+                    //     sparkRandomMoveHEL(that.dom);
+                    // }, Math.random() * 3000 + 8000);
+                } else {
+                    $(that.dom).find("img").each(function(){
+                        var img = this;
+                        img._sparkx = $(img).offset().left;
+                        img._sparky = $(img).offset().top;
+                        $(img).fadeTo(
+                            parseInt(Math.random() * 2000), 
+                            parseInt(Math.random() * that.config.opacityRatio * 10) / 100,
+                            sparkRandomMove
+                        );
+                    });
+                }
             } else {
                 $(that.dom).find("img").each(function(){
                     var img = this;
