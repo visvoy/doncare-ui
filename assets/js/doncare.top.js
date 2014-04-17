@@ -149,6 +149,16 @@
         delayHideMenu();
     });
     
+    $("#dock a").click(function(){
+        selectedMenu = $(this).index();
+    });
+    $("#dock-text a").click(function(){
+        selectedMenu = $(this).index();
+    });
+    $("#menu-wrap div a").click(function(){
+        selectedMenu = $(this).parent().index();
+    });
+    
     $("#bg-menu, #bg-menu div, #menu-wrap div, #menu-wrap div a").hover(function(){
         var hoverIndex = $("#menu-wrap div:visible").index();
         
@@ -199,6 +209,9 @@
             return;
         }
         var url = $(this).attr("href");
+        if (url.toLowerCase().indexOf('javascript:')>-1) {
+            return;
+        }
         this.onclick = function() {
             if (DC.page.caseIsShowing()) {
                 DC.page.hidecase();
